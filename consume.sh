@@ -2,4 +2,6 @@
 
 source ./.config.sh
 
-kafka-console-consumer.sh --bootstrap-server ${BOOTSTRAP_SERVER} --topic $1
+shift 2
+
+kafka-console-consumer.sh --bootstrap-server ${BOOTSTRAP_SERVER} --topic $*
